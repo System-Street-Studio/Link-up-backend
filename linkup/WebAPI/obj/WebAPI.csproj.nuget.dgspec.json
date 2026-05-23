@@ -84,14 +84,14 @@
         }
       }
     },
-    "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj": {
+    "d:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj",
+        "projectUniqueName": "d:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj",
         "projectName": "Infrasturcture",
-        "projectPath": "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj",
+        "projectPath": "d:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj",
         "packagesPath": "C:\\Users\\kanuj\\.nuget\\packages\\",
-        "outputPath": "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\obj\\",
+        "outputPath": "d:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -135,6 +135,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.11, )"
@@ -210,8 +218,8 @@
               "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Core\\Core.csproj": {
                 "projectPath": "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Core\\Core.csproj"
               },
-              "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj": {
-                "projectPath": "D:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj"
+              "d:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj": {
+                "projectPath": "d:\\System Street\\LinkUp\\coding\\Link-up-backend\\linkup\\Infrasturcture\\Infrasturcture.csproj"
               }
             }
           }
@@ -234,7 +242,13 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[10.0.8, )"
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
