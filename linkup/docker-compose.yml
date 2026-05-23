@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # 1. .NET Web API (Clean Architecture)
+  api-service:
+    build:
+      context: .                  # Get the entire project context for Docker caching
+      dockerfile: WebAPI/Dockerfile # Dockerfile path
+    container_name: anon_chat_api
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__PostgresConnection=Host=postgres-db;Port=5432;Database=AnonChatDb;Username=chatapp_user;Password=StrongSecurePassword123!;
+      - ConnectionStrings__RedisConnection=redis-cache:6379
+    depends_on:
+      - postgres-db
+      - redis-cache
+
+  # 2. PostgreSQL Database
+  postgres-db:
+    image: postgres:16-alpine
+    container_name: anon_chat_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: chatapp_user
+      POSTGRES_PASSWORD: StrongSecurePassword123!
+      POSTGRES_DB: AnonChatDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_clean_data:/var/lib/postgresql/data
+
+  # 3. Redis Cache (Queue)
+  redis-cache:
+    image: redis:7-alpine
+    container_name: anon_chat_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_clean_data:
