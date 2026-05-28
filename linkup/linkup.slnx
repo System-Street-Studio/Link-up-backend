@@ -2,4 +2,5 @@
   <Project Path="Core/Core.csproj" />
   <Project Path="Infrasturcture/Infrasturcture.csproj" />
   <Project Path="WebAPI/WebAPI.csproj" />
+  <Project Path="Tests/Tests.csproj" />
 </Solution>
